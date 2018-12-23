@@ -30,8 +30,8 @@ Typewriter.router.prototype.init = function () {
         var token = window.location.hash.slice(1) || "/";
         console.log(token);
 
-        var routeFunc = this.routes.get(token);
-        routeFunc();
+        var routingFunc = this.routes.get(token);
+        routingFunc.apply(this);
     }
 
     goog.events.listen(this.history, goog.history.EventType.NAVIGATE, goog.partial(this._pageChangedEventHandler, this));
