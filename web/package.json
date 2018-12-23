@@ -1,0 +1,24 @@
+{
+  "name": "typewriter",
+  "version": "1.0.0",
+  "description": "The micro and simple blogging application.",
+  "author": {
+    "name": "Fatih Tatoğlu",
+    "url": "http://tatoglu.net",
+    "email": "fatih@tatoglu.net"
+  },
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://tatoglu.net/license/"
+    }
+  ],
+  "private": true,
+  "dependencies": {
+    "google-closure-library": "20180910.0.0"
+  },
+  "scripts": {
+    "postinstall": "node main"
+  }
+}
