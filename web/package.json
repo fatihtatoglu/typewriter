@@ -16,7 +16,8 @@
   ],
   "private": true,
   "dependencies": {
-    "google-closure-library": "20180910.0.0"
+    "google-closure-library": "20180910.0.0",
+    "closure-templates": "20180314.0.0"
   },
   "scripts": {
     "postinstall": "node main"

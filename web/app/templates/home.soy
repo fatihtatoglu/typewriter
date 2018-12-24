@@ -1,0 +1,16 @@
+{namespace Typewriter.views.home}
+
+/**
+ * @param parameters
+ */
+{template .content}
+<div>
+    <h1>This is home page.</h1>
+</div>
+
+<ul>
+{for $item in $parameters.links}
+<li><a href='{$item["route"]}'>{$item["name"]}</a></li>
+{/for}
+</ul>
+{/template}

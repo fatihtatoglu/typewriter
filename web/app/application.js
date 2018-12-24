@@ -2,8 +2,6 @@ goog.provide("Typewriter.application");
 
 goog.require("goog.events");
 goog.require("goog.events.EventTarget");
-goog.require("goog.History");
-goog.require("goog.history.Html5History");
 goog.require("goog.structs.Map");
 
 goog.require("Typewriter.router");
@@ -26,11 +24,9 @@ Typewriter.application.prototype.init = function () {
 
     Typewriter.registry.set("pipeline", this.pipeline);
 
-    var that = this;
-    this.router.map("/", function () {
-        var controller = new Typewriter.controllers.homeController();
-        controller.init();
-        controller.onLoad();
+    this.router.map("defaulr", "{controller}/{action}/{id}", {
+        "controller": "home",
+        "action": "index"
     });
 
     this.router.init();
@@ -50,8 +46,6 @@ Typewriter.application.prototype.loadConfig = function () {
  */
 Typewriter.application.prototype.registerGlobalEvents = function () {
     console.log("application register global events.");
-
-    //goog.events.listen(this.history, goog.history.EventType.NAVIGATE, goog.partial(this._pageChangedEventHandler, this));
 };
 
 /**
@@ -61,20 +55,6 @@ Typewriter.application.prototype.run = function () {
     console.log("application run.");
 
     this.pipeline.dispatchEvent("application-run");
-};
-
-/**
- * The page changed event handler.
- * @param {!typewriter.application} app
- * @param {goog.events.Event} e
- * @private
- */
-Typewriter.application.prototype._pageChangedEventHandler = function (app, e) {
-
-    var url = window.location.hash.slice(1) || "/";
-
-    console.log(url);
-    console.log(e);
 };
 
 /**

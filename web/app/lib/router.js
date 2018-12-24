@@ -11,22 +11,21 @@ goog.require("goog.history.Html5History");
 Typewriter.router = function () {
     this.routes = new goog.structs.Map();
     this.history = goog.history.Html5History.isSupported() ? new goog.history.Html5History() : new goog.History();
-    this.curentRoute = "";
 };
 
 /**
  * Maps a new route for navigation.
  */
-Typewriter.router.prototype.map = function (token, route) {
+Typewriter.router.prototype.map = function (name, pattern) {
     console.log("route mapped.");
 
-    this.routes.set(token, route);
+    this.routes.set(name, pattern);
 };
 
 Typewriter.router.prototype.init = function () {
     console.log("route init.");
 
-    if (this.curentRoute === "") {
+    if (!this.curentRoute) {
         var token = window.location.hash.slice(1) || "/";
         console.log(token);
 
@@ -38,10 +37,5 @@ Typewriter.router.prototype.init = function () {
 };
 
 Typewriter.router.prototype._pageChangedEventHandler = function (app, e) {
-    console.log("page changed.");
-
-
-
-
-    console.log(e);
+    console.log("page changed.", e);
 };
