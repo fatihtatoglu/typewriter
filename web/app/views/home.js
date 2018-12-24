@@ -21,8 +21,8 @@ goog.require('soydata.VERY_UNSAFE');
  */
 Typewriter.views.home.content = function(opt_data, opt_ijData, opt_ijData_deprecated) {
   opt_ijData = opt_ijData_deprecated || opt_ijData;
-  var output = '<div' + ((goog.DEBUG && soy.$$debugSoyTemplateInfo) ? ' data-debug-soy="Typewriter.views.home.content app\\templates\\home.soy:7"' : '') + '><h1>This is hpme page.</h1></div><ul' + ((goog.DEBUG && soy.$$debugSoyTemplateInfo) ? ' data-debug-soy="Typewriter.views.home.content app\\templates\\home.soy:11"' : '') + '>';
-  var item5List = opt_data.parameters.links;
+  var output = '<div' + ((goog.DEBUG && soy.$$debugSoyTemplateInfo) ? ' data-debug-soy="Typewriter.views.home.content app\\templates\\home.soy:7"' : '') + '><h1>This is home page.</h1></div><ul' + ((goog.DEBUG && soy.$$debugSoyTemplateInfo) ? ' data-debug-soy="Typewriter.views.home.content app\\templates\\home.soy:11"' : '') + '>';
+  var item5List = opt_data.parameters['links'];
   var item5ListLen = item5List.length;
   for (var item5Index = 0; item5Index < item5ListLen; item5Index++) {
     var item5Data = item5List[item5Index];

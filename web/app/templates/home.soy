@@ -9,7 +9,7 @@
 </div>
 
 <ul>
-{for $item in $parameters.links}
+{for $item in $parameters["links"]}
 <li><a href='{$item["route"]}'>{$item["name"]}</a></li>
 {/for}
 </ul>

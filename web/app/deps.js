@@ -4,3 +4,4 @@ goog.addDependency('../../../../app/application.js', ['Typewriter.application'],
 goog.addDependency('../../../../app/bootstrapper.js', ['Typewriter.boot'], ['Typewriter.application'], {});
 goog.addDependency('../../../../app/controllers/homeController.js', ['Typewriter.controllers.homeController'], [], {});
 goog.addDependency('../../../../app/lib/router.js', ['Typewriter.router'], ['goog.History', 'goog.events', 'goog.history.Html5History', 'goog.structs.Map'], {});
+goog.addDependency('../../../../app/views/home.js', ['Typewriter.views.home'], ['soy', 'soydata.VERY_UNSAFE'], {});
