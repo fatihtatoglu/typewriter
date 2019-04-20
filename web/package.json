@@ -17,7 +17,9 @@
   "private": true,
   "dependencies": {
     "google-closure-library": "20180910.0.0",
-    "closure-templates": "20180314.0.0"
+    "closure-templates": "20180314.0.0",
+    "normalize.css": "8.0.1",
+    "html5shiv": "3.7.3"
   },
   "scripts": {
     "postinstall": "node main"

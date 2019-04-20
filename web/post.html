@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+    <style>
+        body { background-color: #f1f2f6; font-family: 'Roboto', sans-serif; color: #2f3542; }
+        a { text-decoration: none; color: #2f3542; }
+        button { background-color: #ffffff; border: #ced6e0 1px solid; padding: 0px 24px; height: 32px; border-radius: 5px; }
+
+        a:hover { color:#1e90ff; }
+        a:active { color: #3742fa; }
+
+        button:hover { background-color:#1e90ff; color: #ffffff; }
+
+        textarea:focus { outline: none !important; }
+
+        header { background-color: #ffffff; height: 65px; width: 100%; border-bottom: #ced6e0 1px solid; }
+        header nav{ width: 1024px; margin-left: auto; margin-right: auto; font-size: 32px; }
+
+        section.site-name { padding-top: 12px; width: 300px; }
+        section.profile { width: 200px; height: 40px; padding-top: 14px; text-align: right; }
+
+        header.shadow { -moz-box-shadow: 0px 2px 8px 4px #ced6e0; -webkit-box-shadow: 0px 2px 8px 4px #ced6e0; box-shadow: 0px 2px 8px 4px #ced6e0; }
+
+        main { width: 100%; }
+
+        main article { width: 768px; margin-left: auto; margin-right: auto; margin-bottom: 108px; }
+        main article h1 { font-weight: 400; padding: 16px 20px 0px 20px; }
+        
+        main article p,
+        main article h2,
+        main article h3,
+        main article ul,
+        main article aside.tag,
+        main article aside.comment { width: 700px; margin-left: auto; margin-right: auto; }
+        main article p { font-size: 18px; line-height: 1.5; }
+        main article h2 { margin-top: 54px; margin-bottom: 0px; }
+        main article a { text-decoration: underline; }
+        main article ul { margin-left: 54px; }
+
+        main article aside.tag { text-align: left; margin-top: 54px; }
+        main article aside.tag span { padding: 5px 10px; background-color: #2f3542; border-radius: 10px; margin: 5px 10px 5px 0px; display: inline-block; }
+        main article aside.tag span a { text-decoration: none; color: #ffffff; }
+        main article aside.tag span:hover { background-color: #1e90ff; }
+        main article aside.tag span:active { background-color: #3742fa; }
+
+        main article aside.comment { margin-top: 54px; }
+        main article aside.comment section textarea { background-color: #ffffff; min-height: 100px; border: #ced6e0 1px solid; border-radius: 5px; width: 100%; resize: none; font-size: 18px; }
+        
+        main article figure { text-align: center; margin: 0px; }
+        main article figure img { max-width: 700px; }
+
+        .push-left { float: left; }
+        .push-right { float: right; }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="node_modules/html5shiv/dist/html5shiv.min.js"></script>
+    <![endif]-->  
+</head>
+
+<body>
+    <header class="shadow">
+        <nav>
+            <section class="site-name push-left">
+                <a href="./main.html">Fatih Tatoğlu</a>
+            </section>
+            <section class="profile push-right">
+                <a href="https://www.linkedin.com/in/fatih-tato%C4%9Flu-4319b254/" target="_new"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/fatihtatoglu/" target="_new"><i class="fab fa-instagram"></i></a>
+                <a id="linkEmail" href="javascript:;"><i class="fas fa-at"></i></a>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Takımınızın Scrum bilgisini hızlıca tazeleyin: Self Scrum Refresher</h1>
+            <figure>
+                <img src="https://cdn-images-1.medium.com/max/800/1*mU2fPDQvlTNAxIphga0wqQ.jpeg">
+                <figcaption>Self Scrum Refresher</figcaption>
+            </figure>
+            <p>
+                <a href="https://medium.com/yemeksepeti-teknoloji/yemeksepetinde-agile-refreshment-6a6fb22caea3">Yemeksepeti’nde Agile Refreshment</a> yazısında değineceğimi söylediğim detaylardan biri de "Self Scrum Refresher". Yazıda SSR şeklinde kısaltarak kullanacağım.
+            </p>
+            <section>
+                <h2>Nedir?</h2>
+                <p>SSR, takımın Scrum Rolleri, Artifact ve Event’leri hakkında bilgi durumunu ve bakış açısını anlamanızı sağlayan bir yöntem. Diyebilirsiniz ki “Herkesin Scrum eğitimi aldığı bir ortamda buna gerek var mı?”. Takımlar bazen Scrum kurallarını esnetebiliyor ya da Scrum çerçevesine göre yanlış yorumluyor. Ya da zorlandıkları yerlerde eski bildikleri pratiklere hızlıca dönebiliyorlar. Bu durumlarda -özellikle de bir Agile Refreshment dönemindeyseniz- takımdaki herkesin aynı noktada olup olmadığından emin olmakta yarar var ;)</p>
+            </section>
+            <section>
+                    <h2>Nasıl uygulanır?</h2>
+                    <p>Ekrana Scrum Framework’ünü yansıtıyoruz. Takımdaki herkese post-it ve kalem verip aşağıdaki 11 madde için en düşük 1, en yüksek 5 olmak üzere puan vermesini ve bu puanı neden verdiğini 10 dakika içinde yazmasını ve ilgili başlık üstüne yapıştırmasını istiyoruz.</p>
+                    <h3>Roles:</h3>
+                    <ul>
+                        <li>Product Owner</li>
+                        <li>Scrum Master</li>
+                        <li>Development Team</li>
+                    </ul>
+                    <h3>Artifacts:</h3>
+                    <ul>
+                        <li>Product Backlog</li>
+                        <li>Sprint Backlog</li>
+                        <li>Increment</li>
+                    </ul>
+                    <h3>Events:</h3>
+                    <ul>
+                        <li>Sprint</li>
+                        <li>Sprint Planning</li>
+                        <li>Daily Scrum</li>
+                        <li>Sprint Refinement</li>
+                        <li>Sprint Retrospective</li>
+                    </ul>
+                    <p>Her başlıktaki maddeyi tek tek okuyup takıma, verilen puana ve sebebine katılıp katılmadığını soruyoruz.</p>
+            </section>
+            <section>
+                <h2>Nasıl yorumlanır?</h2>
+                <p>Puanlar arasında çok fark varsa ya o konuda bilgi eksikliğini işaret ediyor ya da herkes aynı etkiyi yaşamıyor anlamına geliyor. Bu durumda önce takımdan, konuşup bildiklerini anlatmasını istiyoruz sonra da bilgi eksikse ya da yanlış biliniyorsa Scrum çerçevesine göre doğrusunu anlatıp kafa karışıklıklarını gideriyoruz.</p>
+                <p>Bazen puanlar birbirine çok yakın ama hepsi birden çok düşük çıkıyor. Bu durum, genelde takımın o maddeyi uygulamada zorlandığının bir göstergesi. Neden zorlandıklarını anlatmalarından sonra iyileştirebilecekleri alanlar varsa sorular sorarak takımın bulmasını sağlıyoruz ya da Scrum çerçevesinde ne yapmaları gerektiğini takıma anlatıyoruz.</p>
+                <p>Bazen de puanların hepsi çok yüksek çıkıyor ama verdikleri puanı neden verdiklerini açıklayamıyorlar. Bu da genelde o maddenin ne olduğunu hatırlamadıklarının ve anlatacak bir şey bulamadıkları için yüksek puan verip geçmelerinin bir göstergesi :) Bu durumda da, maddenin ne olduğunu Scrum çerçevesine göre anlatıp, anlayıp anlamadıklarını sorular sorarak teyit ediyoruz.</p>
+            </section>
+            <section>
+                    <h2>Son not…</h2>
+                    <p>SSR sayesinde takımlara tekrar Scrum eğitimi vermek yerine bilgileri üzerinden hatırlatmalar yaparak, sorular sorarak ortak bilgiye ve anlayışa varmalarını ve farkındalıklarının artmasını sağlıyoruz. Bence uzun süre birlikte çalışan takımlara 6 ay’da bir, yılda bir gibi belli bir periyotta uygulanabilir. Takımda kişiler değişiyor olabilir, takımda eskiye tekrar dönüş olabilir. Ara ara tekrarlamak Scrum bilgisini güncel tutacaktır.</p>
+                    <p>Sonraki yazıda görüşmek üzere ;)</p>
+            </section>
+            <aside class="tag">
+                <span><a href="javascript:;">Agile Refreshment</a></span>
+                <span><a href="javascript:;">Yemeksepeti</a></span>
+                <span><a href="javascript:;">Scrum</a></span>
+                <span><a href="javascript:;">Scrum Çerçevesi</a></span>
+                <span><a href="javascript:;">Scrum Team</a></span>
+            </aside>
+            <aside class="comment">
+                <h3>Yorumlar</h3>
+                <section>
+                    <textarea id="txtComment"></textarea>
+                    <button>Gönder</button>
+                </section>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <nav></nav>
+        <nav></nav>
+    </footer>
+</body>
+
+</html>
