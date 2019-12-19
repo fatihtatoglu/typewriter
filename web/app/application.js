@@ -2,7 +2,6 @@ goog.provide("Typewriter.application");
 
 goog.require("goog.events");
 goog.require("goog.events.EventTarget");
-goog.require("goog.structs.Map");
 
 goog.require("Typewriter.router");
 goog.require("Typewriter.controllers.homeController");
@@ -24,7 +23,7 @@ Typewriter.application.prototype.init = function () {
 
     Typewriter.registry.set("pipeline", this.pipeline);
 
-    this.router.map("defaulr", "{controller}/{action}/{id}", {
+    this.router.map("default", "{controller}/{action}/{id}", {
         "controller": "home",
         "action": "index"
     });
