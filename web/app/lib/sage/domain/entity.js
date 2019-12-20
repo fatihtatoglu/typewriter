@@ -1,7 +1,5 @@
 goog.provide("sage.domain.entity");
 
-goog.require("sage");
-
 /**
  * @param {string} id
  * @constructor
@@ -19,4 +17,12 @@ sage.domain.entity = function (id) {
  */
 sage.domain.entity.prototype.getId = function () {
     return this.id_;
+};
+
+/**
+ * @param {string} id
+ * @return {boolean}
+ */
+sage.domain.entity.prototype.equals = function (id) {
+    return this.id_ === id;
 };

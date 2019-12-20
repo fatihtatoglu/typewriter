@@ -16,8 +16,9 @@
   ],
   "private": true,
   "dependencies": {
-    "google-closure-library": "20180910.0.0",
-    "closure-templates": "20180314.0.0",
+    "google-closure-library": "20191111.0.0",
+    "google-closure-templates": "20190311.0.7",
+    "google-closure-compiler": "20191111.0.0",
     "normalize.css": "8.0.1",
     "html5shiv": "3.7.3"
   },

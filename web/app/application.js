@@ -6,12 +6,21 @@ goog.require("goog.events.EventTarget");
 goog.require("Typewriter.router");
 goog.require("Typewriter.controllers.homeController");
 
+goog.require("sage");
+
 /**
  * The typewriter application.
  * @constructor
  */
 Typewriter.application = function () {
-    this.pipeline = new goog.events.EventTarget();
+
+    /**
+     * @type {goog.events.EventTarget}
+     * @private
+     */
+    this.pipeline_ = new goog.events.EventTarget();
+    sage.registry.set("pipeline", this.pipeline_);
+
     this.router = new Typewriter.router();
 };
 
@@ -21,8 +30,6 @@ Typewriter.application = function () {
 Typewriter.application.prototype.init = function () {
     console.log("application init.");
 
-    Typewriter.registry.set("pipeline", this.pipeline);
-
     this.router.map("default", "{controller}/{action}/{id}", {
         "controller": "home",
         "action": "index"
@@ -30,7 +37,7 @@ Typewriter.application.prototype.init = function () {
 
     this.router.init();
 
-    this.pipeline.dispatchEvent("application-init");
+    this.pipeline_.dispatchEvent("application-init");
 };
 
 /**
@@ -53,10 +60,5 @@ Typewriter.application.prototype.registerGlobalEvents = function () {
 Typewriter.application.prototype.run = function () {
     console.log("application run.");
 
-    this.pipeline.dispatchEvent("application-run");
+    this.pipeline_.dispatchEvent("application-run");
 };
-
-/**
- * Typewriter global registry.
- */
-Typewriter.registry = new goog.structs.Map();

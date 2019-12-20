@@ -5,12 +5,21 @@ goog.require("goog.structs.Map");
 goog.require("goog.History");
 goog.require("goog.history.Html5History");
 
+goog.require("sage");
+
 /**
  * @constructor
  */
 Typewriter.router = function () {
     this.routes = new goog.structs.Map();
     this.history = goog.history.Html5History.isSupported() ? new goog.history.Html5History() : new goog.History();
+
+    /**
+     * @type {goog.events.EventTarget}
+     * @private
+     */
+    this.pipeline_ = sage.registry.get("pipeline");
+    console.log(this.pipeline_);
 };
 
 /**
